@@ -1,5 +1,5 @@
 {
-  "name": "r3xs-backups",
+  "name": "r3xs-backup",
   "version": "1.0.0",
   "description": "Ferramenta CLI para backup de ROMs e save states de handhelds R36S/R35S com ArkOS",
   "main": "src/index.js",

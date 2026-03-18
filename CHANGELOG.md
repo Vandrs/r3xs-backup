@@ -52,5 +52,5 @@ Primeira versão estável com funcionalidades básicas de backup.
 - `Fixed` para bug fixes
 - `Security` para correções de segurança
 
-[unreleased]: https://github.com/seu-usuario/r3xs-backups/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/seu-usuario/r3xs-backups/releases/tag/v1.0.0
+[unreleased]: https://github.com/seu-usuario/r3xs-backup/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/seu-usuario/r3xs-backup/releases/tag/v1.0.0

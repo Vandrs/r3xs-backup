@@ -9,14 +9,14 @@ O **R3XS Backups** facilita o backup dos seus jogos e saves do handheld R36S/R35
 ## 🚀 Instalação
 
 ```bash
-npm install -g r3xs-backups
+npm install -g r3xs-backup
 ```
 
 Ou clone o repositório e instale localmente:
 
 ```bash
-git clone https://github.com/seu-usuario/r3xs-backups.git
-cd r3xs-backups
+git clone https://github.com/seu-usuario/r3xs-backup.git
+cd r3xs-backup
 npm install
 npm link
 ```

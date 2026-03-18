@@ -7,7 +7,7 @@ Este documento descreve a organização de arquivos e pastas do projeto R3XS Bac
 ## Estrutura de Diretórios
 
 ```
-r3xs-backups/
+r3xs-backup/
 ├── src/                      # Código-fonte principal
 │   ├── index.js             # Entry point da aplicação CLI
 │   ├── commands/            # Comandos do Commander.js

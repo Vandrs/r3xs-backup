@@ -54,7 +54,7 @@ npm test
 ## 📂 Estrutura do Projeto
 
 ```
-r3xs-backups/
+r3xs-backup/
 ├── src/                   # Código-fonte
 │   ├── index.js          # Entry point CLI
 │   ├── commands/         # Comandos do Commander

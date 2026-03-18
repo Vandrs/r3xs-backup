@@ -7,8 +7,8 @@ Obrigado por considerar contribuir com o R3XS Backups! 🎮
 ### 1. Fork e Clone
 
 ```bash
-git clone https://github.com/seu-usuario/r3xs-backups.git
-cd r3xs-backups
+git clone https://github.com/seu-usuario/r3xs-backup.git
+cd r3xs-backup
 npm install
 ```
 
