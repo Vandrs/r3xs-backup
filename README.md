@@ -123,9 +123,20 @@ npm run test:coverage
 npm start -- --source ./test-source --dest ./test-dest --full
 ```
 
-## 📚 Documentação Técnica
+## 📚 Documentação
 
-Para informações sobre arquitetura, decisões de design e estrutura do projeto, consulte a pasta [`devdocs/`](./devdocs/).
+### Para Usuários
+- **README.md** (este arquivo) - Como usar o CLI
+- **[devdocs/USER_GUIDE.md](./devdocs/USER_GUIDE.md)** - Guia completo de uso e desenvolvimento
+
+### Para Desenvolvedores
+- **[devdocs/INDEX.md](./devdocs/INDEX.md)** - Índice completo da documentação
+- **[devdocs/PROJECT_STRUCTURE.md](./devdocs/PROJECT_STRUCTURE.md)** - Arquitetura e estrutura
+- **[devdocs/CONTRIBUTING.md](./devdocs/CONTRIBUTING.md)** - Como contribuir
+- **[devdocs/TESTING.md](./devdocs/TESTING.md)** - Guia de testes
+- **[devdocs/ROADMAP.md](./devdocs/ROADMAP.md)** - Plano de evolução
+
+📖 **[Ver índice completo da documentação](./devdocs/INDEX.md)**
 
 ## 🤝 Contribuindo
 
@@ -136,6 +147,8 @@ Contribuições são bem-vindas! Por favor:
 3. Commit suas mudanças (`git commit -m 'Adiciona MinhaFeature'`)
 4. Push para a branch (`git push origin feature/MinhaFeature`)
 5. Abra um Pull Request
+
+Veja o [guia de contribuição](./devdocs/CONTRIBUTING.md) para mais detalhes.
 
 ## 📄 Licença
 

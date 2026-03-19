@@ -5,60 +5,58 @@ Guia completo de navegação da documentação do R3XS Backups.
 ## 📖 Para Usuários
 
 ### Começar a Usar
-1. **[README.md](./README.md)** ⭐
+1. **[README.md](../README.md)** ⭐
    - Como instalar
    - Exemplos de uso
    - Opções do CLI
    - Casos práticos
 
-2. **[GETTING_STARTED.md](./GETTING_STARTED.md)**
-   - Setup inicial
-   - Primeiro backup
-   - Troubleshooting básico
-
-3. **[QUICK_REFERENCE.md](./QUICK_REFERENCE.md)**
-   - Comandos mais usados
-   - Atalhos úteis
-   - Dicas rápidas
+2. **[USER_GUIDE.md](./USER_GUIDE.md)**
+   - Setup inicial e instalação
+   - Comandos essenciais
+   - Desenvolvimento com TDD
+   - Git workflow
+   - Troubleshooting
+   - Publicação NPM
 
 ## 👨‍💻 Para Desenvolvedores
 
 ### Começar a Contribuir
 
-4. **[devdocs/CONTRIBUTING.md](./devdocs/CONTRIBUTING.md)**
+3. **[CONTRIBUTING.md](./CONTRIBUTING.md)**
    - Como contribuir
    - Style guide
    - Workflow de PR
 
-5. **[devdocs/VERIFICATION_CHECKLIST.md](./devdocs/VERIFICATION_CHECKLIST.md)**
+4. **[VERIFICATION_CHECKLIST.md](./VERIFICATION_CHECKLIST.md)**
    - Verificação inicial do ambiente
    - Testes de funcionalidade
    - Validação completa
 
 ### Entender a Arquitetura
 
-6. **[devdocs/PROJECT_STRUCTURE.md](./devdocs/PROJECT_STRUCTURE.md)** ⭐
+5. **[PROJECT_STRUCTURE.md](./PROJECT_STRUCTURE.md)** ⭐
    - Visão geral do projeto
    - Estrutura de pastas
    - Responsabilidades dos módulos
    - Fluxo de dados
-   - Métricas e status
+   - Métricas e status atual
 
 ### Decisões de Design
 
-7. **[devdocs/ADR-001-tech-stack.md](./devdocs/ADR-001-tech-stack.md)**
+6. **[ADR-001-tech-stack.md](./ADR-001-tech-stack.md)**
    - Por que Node.js?
    - Por que Commander.js?
    - Trade-offs considerados
 
-8. **[devdocs/ADR-002-file-filtering-strategy.md](./devdocs/ADR-002-file-filtering-strategy.md)**
+7. **[ADR-002-file-filtering-strategy.md](./ADR-002-file-filtering-strategy.md)**
    - Lógica de filtros
    - Alternativas consideradas
    - Casos de teste
 
 ### Testes
 
-9. **[devdocs/TESTING.md](./devdocs/TESTING.md)**
+8. **[TESTING.md](./TESTING.md)**
    - Guia de testes
    - Como rodar testes
    - Cobertura de código
@@ -66,13 +64,13 @@ Guia completo de navegação da documentação do R3XS Backups.
 
 ### Roadmap e Futuro
 
-10. **[devdocs/ROADMAP.md](./devdocs/ROADMAP.md)**
-    - Fase 1: CLI MVP ✅
-    - Fase 2: CLI Avançado
-    - Fase 3: GUI Electron
-    - Fase 4: Cloud & Sync
+9. **[ROADMAP.md](./ROADMAP.md)**
+   - Fase 1: CLI MVP ✅
+   - Fase 2: CLI Avançado
+   - Fase 3: GUI Electron
+   - Fase 4: Cloud & Sync
 
-11. **[devdocs/EXAMPLE_CONFIG.md](./devdocs/EXAMPLE_CONFIG.md)**
+10. **[EXAMPLE_CONFIG.md](./EXAMPLE_CONFIG.md)**
     - Configurações futuras
     - Profiles
     - Cloud integration
@@ -115,44 +113,46 @@ Guia completo de navegação da documentação do R3XS Backups.
 ## 🗺️ Fluxo de Leitura Recomendado
 
 ### Novo Usuário
-1. README.md
-2. GETTING_STARTED.md
-3. QUICK_REFERENCE.md
+1. [README.md](../README.md)
+2. [USER_GUIDE.md](./USER_GUIDE.md) - Seção "Quick Start"
 
 ### Novo Contribuidor
-1. devdocs/PROJECT_STRUCTURE.md
-2. devdocs/CONTRIBUTING.md
-3. devdocs/VERIFICATION_CHECKLIST.md
-4. devdocs/TESTING.md
+1. [PROJECT_STRUCTURE.md](./PROJECT_STRUCTURE.md)
+2. [USER_GUIDE.md](./USER_GUIDE.md) - Seção "Desenvolvimento com TDD"
+3. [CONTRIBUTING.md](./CONTRIBUTING.md)
+4. [VERIFICATION_CHECKLIST.md](./VERIFICATION_CHECKLIST.md)
+5. [TESTING.md](./TESTING.md)
 
 ### Decisão de Design
-1. devdocs/ADR-001-tech-stack.md
-2. devdocs/ADR-002-file-filtering-strategy.md
-3. devdocs/ROADMAP.md
+1. [ADR-001-tech-stack.md](./ADR-001-tech-stack.md)
+2. [ADR-002-file-filtering-strategy.md](./ADR-002-file-filtering-strategy.md)
+3. [ROADMAP.md](./ROADMAP.md)
 
-## 📊 Estatísticas
+## 📊 Estatísticas da Documentação
 
 | Tipo | Quantidade |
 |------|------------|
-| Arquivos Markdown (raiz) | 4 |
-| Arquivos Markdown (devdocs) | 7 |
+| Arquivos Markdown (raiz) | 1 (README.md) |
+| Arquivos Markdown (devdocs/) | 9 |
 | Arquivos JavaScript (src/) | 6 |
 | Arquivos de Teste | 6 |
 | ADRs | 2 |
+| Total de Linhas de Código | ~335 |
+| Total de Linhas de Teste | ~600 |
+| Cobertura de Testes | 84.34% |
 
 ## 🔍 Buscar Informação
 
 **Preciso de...**
 
-- ✅ Como usar o CLI → [README.md](./README.md)
-- ✅ Instalar e começar → [GETTING_STARTED.md](./GETTING_STARTED.md)
-- ✅ Comandos rápidos → [QUICK_REFERENCE.md](./QUICK_REFERENCE.md)
-- ✅ Contribuir → [devdocs/CONTRIBUTING.md](./devdocs/CONTRIBUTING.md)
-- ✅ Rodar testes → [devdocs/TESTING.md](./devdocs/TESTING.md)
-- ✅ Entender arquitetura → [devdocs/PROJECT_STRUCTURE.md](./devdocs/PROJECT_STRUCTURE.md)
-- ✅ Ver roadmap → [devdocs/ROADMAP.md](./devdocs/ROADMAP.md)
-- ✅ Decisões técnicas → [devdocs/ADR-*.md](./devdocs/)
-- ✅ Verificar ambiente → [devdocs/VERIFICATION_CHECKLIST.md](./devdocs/VERIFICATION_CHECKLIST.md)
+- ✅ Como usar o CLI → [README.md](../README.md)
+- ✅ Setup e comandos → [USER_GUIDE.md](./USER_GUIDE.md)
+- ✅ Contribuir → [CONTRIBUTING.md](./CONTRIBUTING.md)
+- ✅ Rodar testes → [TESTING.md](./TESTING.md) ou [USER_GUIDE.md](./USER_GUIDE.md)
+- ✅ Entender arquitetura → [PROJECT_STRUCTURE.md](./PROJECT_STRUCTURE.md)
+- ✅ Ver roadmap → [ROADMAP.md](./ROADMAP.md)
+- ✅ Decisões técnicas → [ADR-*.md](./ADR-001-tech-stack.md)
+- ✅ Verificar ambiente → [VERIFICATION_CHECKLIST.md](./VERIFICATION_CHECKLIST.md)
 
 ## 📧 Faltou Algo?
 
@@ -163,5 +163,5 @@ Se você não encontrou o que procurava:
 
 ---
 
-**Última Atualização:** 18/03/2026
-**Estrutura:** Consolidada e simplificada
+**Última Atualização:** 18/03/2026  
+**Estrutura:** Simplificada - 1 arquivo na raiz + devdocs/ completo
