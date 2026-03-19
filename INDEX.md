@@ -24,61 +24,58 @@ Guia completo de navegação da documentação do R3XS Backups.
 ## 👨‍💻 Para Desenvolvedores
 
 ### Começar a Contribuir
-4. **[CHECKLIST.md](./CHECKLIST.md)**
-   - Verificação inicial
-   - Testes de funcionalidade
-   - Validação completa
 
-5. **[devdocs/CONTRIBUTING.md](./devdocs/CONTRIBUTING.md)**
+4. **[devdocs/CONTRIBUTING.md](./devdocs/CONTRIBUTING.md)**
    - Como contribuir
    - Style guide
    - Workflow de PR
 
-### Entender a Arquitetura
-6. **[PROJECT_SUMMARY.md](./PROJECT_SUMMARY.md)** ⭐
-   - Visão executiva
-   - Métricas do projeto
-   - Status atual
+5. **[devdocs/VERIFICATION_CHECKLIST.md](./devdocs/VERIFICATION_CHECKLIST.md)**
+   - Verificação inicial do ambiente
+   - Testes de funcionalidade
+   - Validação completa
 
-7. **[devdocs/PROJECT_STRUCTURE.md](./devdocs/PROJECT_STRUCTURE.md)**
+### Entender a Arquitetura
+
+6. **[devdocs/PROJECT_STRUCTURE.md](./devdocs/PROJECT_STRUCTURE.md)** ⭐
+   - Visão geral do projeto
    - Estrutura de pastas
    - Responsabilidades dos módulos
    - Fluxo de dados
+   - Métricas e status
 
 ### Decisões de Design
-8. **[devdocs/ADR-001-tech-stack.md](./devdocs/ADR-001-tech-stack.md)**
+
+7. **[devdocs/ADR-001-tech-stack.md](./devdocs/ADR-001-tech-stack.md)**
    - Por que Node.js?
    - Por que Commander.js?
    - Trade-offs considerados
 
-9. **[devdocs/ADR-002-file-filtering-strategy.md](./devdocs/ADR-002-file-filtering-strategy.md)**
+8. **[devdocs/ADR-002-file-filtering-strategy.md](./devdocs/ADR-002-file-filtering-strategy.md)**
    - Lógica de filtros
    - Alternativas consideradas
    - Casos de teste
 
 ### Testes
-10. **[devdocs/TESTING.md](./devdocs/TESTING.md)**
-    - Guia de testes
-    - Como rodar testes
-    - Cobertura de código
-    - TDD workflow
+
+9. **[devdocs/TESTING.md](./devdocs/TESTING.md)**
+   - Guia de testes
+   - Como rodar testes
+   - Cobertura de código
+   - TDD workflow
 
 ### Roadmap e Futuro
-11. **[devdocs/ROADMAP.md](./devdocs/ROADMAP.md)**
+
+10. **[devdocs/ROADMAP.md](./devdocs/ROADMAP.md)**
     - Fase 1: CLI MVP ✅
     - Fase 2: CLI Avançado
     - Fase 3: GUI Electron
     - Fase 4: Cloud & Sync
 
-12. **[devdocs/EXAMPLE_CONFIG.md](./devdocs/EXAMPLE_CONFIG.md)**
+11. **[devdocs/EXAMPLE_CONFIG.md](./devdocs/EXAMPLE_CONFIG.md)**
     - Configurações futuras
     - Profiles
     - Cloud integration
-
-### Histórico
-13. **[CHANGELOG.md](./CHANGELOG.md)**
-    - Histórico de versões
-    - Mudanças por versão
 
 ## 📂 Código-Fonte
 
@@ -99,9 +96,11 @@ Guia completo de navegação da documentação do R3XS Backups.
 ## 🧪 Testes
 
 ### Unitários
+- `tests/unit/backup.test.js`
 - `tests/unit/fileScanner.test.js`
 - `tests/unit/fileCopier.test.js`
 - `tests/unit/conflictResolver.test.js`
+- `tests/unit/validators.test.js`
 
 ### Integração
 - `tests/integration/backup.test.js`
@@ -121,11 +120,10 @@ Guia completo de navegação da documentação do R3XS Backups.
 3. QUICK_REFERENCE.md
 
 ### Novo Contribuidor
-1. PROJECT_SUMMARY.md
+1. devdocs/PROJECT_STRUCTURE.md
 2. devdocs/CONTRIBUTING.md
-3. CHECKLIST.md
+3. devdocs/VERIFICATION_CHECKLIST.md
 4. devdocs/TESTING.md
-5. devdocs/PROJECT_STRUCTURE.md
 
 ### Decisão de Design
 1. devdocs/ADR-001-tech-stack.md
@@ -136,11 +134,11 @@ Guia completo de navegação da documentação do R3XS Backups.
 
 | Tipo | Quantidade |
 |------|------------|
-| Arquivos Markdown | 13 |
+| Arquivos Markdown (raiz) | 4 |
+| Arquivos Markdown (devdocs) | 7 |
 | Arquivos JavaScript (src/) | 6 |
-| Arquivos de Teste | 4 |
+| Arquivos de Teste | 6 |
 | ADRs | 2 |
-| Documentos Técnicos | 8 |
 
 ## 🔍 Buscar Informação
 
@@ -154,8 +152,7 @@ Guia completo de navegação da documentação do R3XS Backups.
 - ✅ Entender arquitetura → [devdocs/PROJECT_STRUCTURE.md](./devdocs/PROJECT_STRUCTURE.md)
 - ✅ Ver roadmap → [devdocs/ROADMAP.md](./devdocs/ROADMAP.md)
 - ✅ Decisões técnicas → [devdocs/ADR-*.md](./devdocs/)
-- ✅ Verificar tudo funciona → [CHECKLIST.md](./CHECKLIST.md)
-- ✅ Status do projeto → [PROJECT_SUMMARY.md](./PROJECT_SUMMARY.md)
+- ✅ Verificar ambiente → [devdocs/VERIFICATION_CHECKLIST.md](./devdocs/VERIFICATION_CHECKLIST.md)
 
 ## 📧 Faltou Algo?
 
@@ -167,3 +164,4 @@ Se você não encontrou o que procurava:
 ---
 
 **Última Atualização:** 18/03/2026
+**Estrutura:** Consolidada e simplificada

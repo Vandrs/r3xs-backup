@@ -1,10 +1,41 @@
-# Estrutura do Projeto
+# Estrutura e Visão Geral do Projeto
 
-## Visão Geral
+## 🎮 R3XS Backups
 
-Este documento descreve a organização de arquivos e pastas do projeto R3XS Backups.
+**Ferramenta CLI para backup de ROMs e save states de handhelds R36S/R35S com ArkOS**
 
-## Estrutura de Diretórios
+---
+
+## ✅ Status do Projeto
+
+**Data:** 18/03/2026  
+**Versão:** 1.0.0 (em desenvolvimento)  
+**Fase:** MVP CLI
+
+### 📊 Métricas
+
+| Métrica | Valor |
+|---------|-------|
+| **Arquivos JavaScript** | 10 |
+| **Arquivos de Teste** | 6 |
+| **Linhas de Código (src/)** | ~335 |
+| **Linhas de Teste** | ~600 |
+| **Cobertura de Testes** | 84.34% |
+| **Ratio Teste/Código** | 1.79:1 ✅ |
+
+---
+
+## 🏗️ Arquitetura
+
+### Tech Stack
+
+- **Runtime:** Node.js ≥16.0.0
+- **CLI Framework:** Commander.js 11.x
+- **Filesystem:** fs-extra 11.x
+- **Testes:** Jest 29.x
+- **UI Terminal:** chalk + ora
+
+### Estrutura de Diretórios
 
 ```
 r3xs-backup/
@@ -17,26 +48,37 @@ r3xs-backup/
 │   │   ├── fileCopier.js    # Cópia de arquivos com estratégias
 │   │   └── conflictResolver.js # Resolução de conflitos
 │   └── utils/               # Utilidades auxiliares
-│       ├── logger.js        # Sistema de logs
 │       └── validators.js    # Validações de entrada
 ├── tests/                   # Testes automatizados
 │   ├── unit/               # Testes unitários
+│   │   ├── backup.test.js
 │   │   ├── fileScanner.test.js
 │   │   ├── fileCopier.test.js
-│   │   └── conflictResolver.test.js
+│   │   ├── conflictResolver.test.js
+│   │   └── validators.test.js
 │   └── integration/        # Testes de integração
 │       └── backup.test.js
 ├── devdocs/                # Documentação técnica
 │   ├── PROJECT_STRUCTURE.md
 │   ├── ADR-001-tech-stack.md
-│   └── ADR-002-file-filtering-strategy.md
+│   ├── ADR-002-file-filtering-strategy.md
+│   ├── TESTING.md
+│   ├── ROADMAP.md
+│   ├── CONTRIBUTING.md
+│   ├── EXAMPLE_CONFIG.md
+│   └── VERIFICATION_CHECKLIST.md
 ├── package.json            # Dependências e scripts
 ├── .gitignore             # Arquivos ignorados pelo Git
 ├── LICENSE                # Licença MIT
-└── README.md              # Documentação de uso (público)
+├── README.md              # Documentação de uso
+├── GETTING_STARTED.md     # Guia de início rápido
+├── QUICK_REFERENCE.md     # Referência rápida
+└── INDEX.md               # Índice da documentação
 ```
 
-## Responsabilidades dos Módulos
+---
+
+## 📦 Responsabilidades dos Módulos
 
 ### `src/index.js`
 - Entry point da aplicação
@@ -48,7 +90,7 @@ r3xs-backup/
 - Implementa o comando `backup`
 - Validação de parâmetros
 - Orquestração dos serviços
-- Feedback visual (spinner, progress bar)
+- Feedback visual (spinner, cores)
 
 ### `src/services/fileScanner.js`
 - Busca recursiva de arquivos
@@ -65,16 +107,14 @@ r3xs-backup/
 - Comparação de timestamps
 - Decisões de substituição
 
-### `src/utils/logger.js`
-- Logs coloridos (chalk)
-- Níveis: info, success, error, warning
-
 ### `src/utils/validators.js`
 - Validação de caminhos
 - Verificação de existência de diretórios
-- Validação de permissões de escrita
+- Validação de permissões
 
-## Fluxo de Dados
+---
+
+## 🔄 Fluxo de Dados
 
 ```
 CLI Input
@@ -90,30 +130,52 @@ commands/backup.js
     ├──→ conflictResolver.js (verifica conflitos)
     ↓
     └──→ fileCopier.js (copia arquivos)
-         ↓
-      logger.js (feedback)
 ```
 
-## Convenções de Código
+---
 
-- **ES6+**: Usar módulos ES6, async/await
-- **Naming**: camelCase para funções e variáveis
-- **Exports**: Named exports para serviços, default export para comandos
-- **Error Handling**: Try/catch em operações assíncronas
-- **Tests**: Um arquivo de teste por módulo
+## ✨ Features Implementadas
 
-## Testes
+### Core Functionality
+- ✅ **Backup Full:** Copia todos os arquivos recursivamente
+- ✅ **Backup Saves-Only:** Filtra arquivos com "state" na extensão
+- ✅ **Busca Recursiva:** Varre toda árvore de diretórios
+- ✅ **Preserva Estrutura:** Mantém hierarquia de pastas
+
+### Estratégias de Conflito
+- ✅ **Overwrite:** Sobrescreve sempre
+- ✅ **Skip:** Ignora duplicados
+- ✅ **Newer:** Sobrescreve apenas se mais recente (padrão)
+
+### User Experience
+- ✅ Feedback visual (spinner + cores)
+- ✅ Estatísticas de backup (sucesso/falha/ignorados)
+- ✅ Validação de caminhos
+- ✅ Mensagens de erro claras
+
+### Quality Assurance
+- ✅ TDD (Test-Driven Development)
+- ✅ Testes unitários (isolados)
+- ✅ Testes de integração (end-to-end)
+- ✅ Cobertura de código: 84.34%
+
+---
+
+## 🧪 Testes
 
 ### Estrutura de Testes
 
 - **Unit tests**: Testam funções isoladas com mocks
-- **Integration tests**: Testam fluxo completo com filesystem real (em temp dir)
+- **Integration tests**: Testam fluxo completo com filesystem temporário
 
-### Cobertura Mínima
+### Cobertura Atual
 
-- Serviços: 90%
-- Comandos: 80%
-- Utils: 95%
+| Módulo | Statements | Branches | Functions | Lines |
+|--------|-----------|----------|-----------|-------|
+| **Total** | **84.34%** | **72.72%** | **100%** | **84.21%** |
+| commands/ | 70.00% | 55.55% | 100% | 69.23% |
+| services/ | 90.47% | 81.81% | 100% | 90.47% |
+| utils/ | 100% | 100% | 100% | 100% |
 
 ### Executar Testes
 
@@ -123,7 +185,62 @@ npm run test:watch   # Modo watch
 npm run test:coverage # Com cobertura
 ```
 
-## Build e Deploy
+---
+
+## 📋 Decisões Arquiteturais (ADRs)
+
+### ADR-001: Tech Stack
+- **Decisão:** Node.js + Commander.js
+- **Razão:** Facilita migração para Electron
+- **Trade-off:** Performance vs. Produtividade
+
+### ADR-002: File Filtering
+- **Decisão:** Extensão contém "state"
+- **Razão:** Simplicidade e robustez
+- **Trade-off:** Flexibilidade vs. Facilidade de uso
+
+Veja pasta `devdocs/` para ADRs completos.
+
+---
+
+## 🗺️ Roadmap
+
+### Fase 1: CLI MVP ✅ (Atual)
+- Backup full e saves-only
+- Estratégias de conflito
+- Testes completos
+
+### Fase 2: CLI Avançado (v1.5.0)
+- Backup incremental
+- Compressão (zip/tar.gz)
+- Configuração persistente
+- Restauração de backups
+
+### Fase 3: GUI Electron (v2.0.0)
+- Interface gráfica desktop
+- Agendamento de backups
+- Histórico visual
+
+### Fase 4: Cloud & Sync (v3.0.0)
+- Upload para cloud (Drive, Dropbox)
+- Sincronização automática
+- Versionamento de saves
+
+Veja [ROADMAP.md](./ROADMAP.md) para detalhes completos.
+
+---
+
+## 💻 Convenções de Código
+
+- **ES6+**: Módulos ES6, async/await
+- **Naming**: camelCase para funções e variáveis
+- **Exports**: Named exports para serviços
+- **Error Handling**: Try/catch em operações assíncronas
+- **Tests**: Padrão AAA (Arrange-Act-Assert)
+
+---
+
+## 🚀 Build e Deploy
 
 ### Desenvolvimento Local
 
@@ -140,20 +257,13 @@ npm version patch|minor|major
 npm publish
 ```
 
-## Roadmap de Arquitetura
+---
 
-### Fase 1 (Atual): CLI
-- ✅ Backup full e saves-only
-- ✅ Estratégias de conflito
-- ✅ Busca recursiva
+## 📄 Licença
 
-### Fase 2: GUI Electron
-- Migrar lógica para main process
-- Criar renderer process com UI
-- Configurações persistentes
+MIT License - Veja [LICENSE](../LICENSE) para detalhes.
 
-### Fase 3: Features Avançadas
-- Backup incremental
-- Compressão (zip/tar.gz)
-- Agendamento de backups
-- Restauração de backups
+---
+
+**Última Atualização:** 18/03/2026  
+**Status:** ✅ Estrutura consolidada e documentada
