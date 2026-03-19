@@ -23,6 +23,15 @@
 | **Cobertura de Testes** | 84.34% |
 | **Ratio Teste/Código** | 1.79:1 ✅ |
 
+### 📊 Documentação
+
+| Tipo | Quantidade |
+|------|------------|
+| README.md (raiz) | 1 |
+| Arquivos em devdocs/ | 7 |
+| ADRs em devdocs/adrs/ | 2 |
+| Total de Linhas de Doc | ~1,150 (pós-otimização) |
+
 ---
 
 ## 🏗️ Arquitetura
@@ -59,13 +68,15 @@ r3xs-backup/
 │   └── integration/        # Testes de integração
 │       └── backup.test.js
 ├── devdocs/                # Documentação técnica
+│   ├── adrs/              # Architecture Decision Records
+│   │   ├── ADR-001-tech-stack.md
+│   │   └── ADR-002-file-filtering-strategy.md
 │   ├── PROJECT_STRUCTURE.md
-│   ├── ADR-001-tech-stack.md
-│   ├── ADR-002-file-filtering-strategy.md
+│   ├── INDEX.md
+│   ├── DEVELOPERS_GUIDE.md
 │   ├── TESTING.md
 │   ├── ROADMAP.md
 │   ├── CONTRIBUTING.md
-│   ├── EXAMPLE_CONFIG.md
 │   └── VERIFICATION_CHECKLIST.md
 ├── package.json            # Dependências e scripts
 ├── .gitignore             # Arquivos ignorados pelo Git
@@ -185,51 +196,6 @@ npm run test:watch   # Modo watch
 npm run test:coverage # Com cobertura
 ```
 
----
-
-## 📋 Decisões Arquiteturais (ADRs)
-
-### ADR-001: Tech Stack
-- **Decisão:** Node.js + Commander.js
-- **Razão:** Facilita migração para Electron
-- **Trade-off:** Performance vs. Produtividade
-
-### ADR-002: File Filtering
-- **Decisão:** Extensão contém "state"
-- **Razão:** Simplicidade e robustez
-- **Trade-off:** Flexibilidade vs. Facilidade de uso
-
-Veja pasta `devdocs/` para ADRs completos.
-
----
-
-## 🗺️ Roadmap
-
-### Fase 1: CLI MVP ✅ (Atual)
-- Backup full e saves-only
-- Estratégias de conflito
-- Testes completos
-
-### Fase 2: CLI Avançado (v1.5.0)
-- Backup incremental
-- Compressão (zip/tar.gz)
-- Configuração persistente
-- Restauração de backups
-
-### Fase 3: GUI Electron (v2.0.0)
-- Interface gráfica desktop
-- Agendamento de backups
-- Histórico visual
-
-### Fase 4: Cloud & Sync (v3.0.0)
-- Upload para cloud (Drive, Dropbox)
-- Sincronização automática
-- Versionamento de saves
-
-Veja [ROADMAP.md](./ROADMAP.md) para detalhes completos.
-
----
-
 ## 💻 Convenções de Código
 
 - **ES6+**: Módulos ES6, async/await
@@ -265,5 +231,5 @@ MIT License - Veja [LICENSE](../LICENSE) para detalhes.
 
 ---
 
-**Última Atualização:** 18/03/2026  
+**Última Atualização:** 19/03/2026  
 **Status:** ✅ Estrutura consolidada e documentada

@@ -186,6 +186,34 @@ Abra uma issue de feature request com:
 - Features "nice-to-have"
 - Otimizações menores
 
+## 📦 Publicação NPM (Maintainers)
+
+### Preparação
+```bash
+# 1. Garantir qualidade
+npm test
+npm run test:coverage  # Mínimo 80%
+
+# 2. Atualizar versão (semver)
+npm version patch  # 1.0.0 -> 1.0.1
+npm version minor  # 1.0.1 -> 1.1.0
+npm version major  # 1.1.0 -> 2.0.0
+
+# 3. Validar pacote
+npm publish --dry-run
+```
+
+### Publicar
+```bash
+npm login
+npm publish
+git push --tags
+```
+
+Veja [ROADMAP.md](./ROADMAP.md) para planos futuros.
+
+---
+
 ## Perguntas?
 
 - Abra uma issue com label "question"
