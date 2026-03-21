@@ -19,6 +19,7 @@ Guia de navegação da documentação do R3XS Backups.
 ### Decisões de Arquitetura (ADRs)
 - **[ADR-001](./adrs/ADR-001-tech-stack.md)** - Escolha de tech stack
 - **[ADR-002](./adrs/ADR-002-file-filtering-strategy.md)** - Estratégia de filtros
+- **[ADR-003](./adrs/ADR-003-monorepo-structure.md)** - Estrutura monorepo com npm workspaces
 
 ### Roadmap
 - **[ROADMAP.md](./ROADMAP.md)** - Plano de evolução do projeto
@@ -49,4 +50,4 @@ Se você não encontrou o que procurava:
 
 ---
 
-**Última Atualização:** 19/03/2026
+**Última Atualização:** 21/03/2026
