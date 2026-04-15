@@ -259,3 +259,18 @@ Before opening a PR, verify:
 - [ ] JSDoc present on all new exported functions
 - [ ] Commits follow Conventional Commits format
 - [ ] `devdocs/` updated if behaviour or structure changed
+
+---
+
+## Diretriz para agentes autônomos
+
+Agentes autônomos (humanos ou bots) que buscam trabalho neste repositório devem consultar o board do GitHub "Roms warehouse" antes de planejar ou implementar tarefas. O board (https://github.com/users/Vandrs/projects/3) é a referência atual para quais issues/tarefas têm prioridade e qual o status de progresso. Não assuma uma lista fixa de colunas ou estados a partir deste arquivo — o board pode mudar e é a fonte de verdade para status e priorização.
+
+Procedimento mínimo recomendado para agentes:
+
+- Verifique o board "Roms warehouse" e identifique a tarefa a ser tratada.
+- Confirme a prioridade e qualquer comentário/nota no card antes de iniciar trabalho.
+- Se for iniciar trabalho, abra uma issue ou comentário vinculando-se ao card/issue correspondente para rastreabilidade.
+- Atualize o board (ou peça ao maintainer responsável) para refletir mudança de status quando o trabalho progredir.
+
+Esta diretriz evita descoordenação entre documentação estática e o estado real do trabalho no board.
