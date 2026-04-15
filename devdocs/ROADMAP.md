@@ -188,6 +188,10 @@ Usamos a matriz de priorização:
 
 ---
 
+### Referência de tasks
+
+O board do GitHub "Roms warehouse" (https://github.com/users/Vandrs/projects/3) é a fonte de verdade para priorização e status das tasks. Consulte o board para ver a priorização e o status atualizados; este documento não lista colunas ou estados fixos para evitar desalinhamento com o board.
+
 ## Changelog
 
 Veja [CHANGELOG.md](../CHANGELOG.md) para histórico de versões.
